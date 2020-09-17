@@ -61,3 +61,17 @@ void _pall(stack_t **stack, unsigned int line)
 		curr = curr->prev;
 	}
 }
+
+/**
+ * _empty - does nothing
+ *
+ * @stack: pointer to the head of the stack
+ * @line: current line number
+ *
+ * Return: void
+ */
+void _empty(stack_t **stack, unsigned int line)
+{
+	(void) stack;
+	(void) line;
+}
