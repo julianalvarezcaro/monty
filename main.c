@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
 	 */
 	fd = openfile(argv[1], &stack);
 
+  freeStack(stack);
+
 	fclose(fd);
 	return (0);
 }

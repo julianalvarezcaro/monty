@@ -47,6 +47,7 @@ char *_lessSpaces(char *entry);
 char *_deleteChar(char *entry, int indx);
 void _split(char *text, char **opcode, char **arg);
 void validArg(char *arg, int line);
+void freeStack(stack_t *stack);
 
 void _push(stack_t **stack, unsigned int line);
 void _pall(stack_t **stack, unsigned int line);
