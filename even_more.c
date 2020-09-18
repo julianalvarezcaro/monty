@@ -50,7 +50,7 @@ void _pchar(stack_t **stack, unsigned int line)
 	{
 		curr = curr->next;
 	}
-	if (curr->n < 0 || curr->n > 255)
+	if (curr->n < 0 || curr->n > 127)
 		m_error_handler(14, line, NULL, NULL);
 	printf("%c\n", curr->n);
 }
