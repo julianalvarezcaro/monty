@@ -68,5 +68,8 @@ void m_error_handler(int error_code, int line, char *opcode, char *pathname)
 		case 9:
 			fprintf(stderr, "L%d: can't sub, stack too short\n", line);
 			exit(EXIT_FAILURE);
+		case 10:
+			fprintf(stderr, "L%d: can't div, stack too short\n", line);
+			exit(EXIT_FAILURE);
 	}
 }

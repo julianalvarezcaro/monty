@@ -10,14 +10,11 @@
 void (*get_func(char *opcode))(stack_t **, unsigned int)
 {
 	instruction_t inst[] = {
-		{"push", _push},
-		{"pall", _pall},
-		{"pint", _pint},
-		{"pop", _pop},
-		{"swap", _swap},
-		{"add", _add},
-		{"sub", _sub},
-		{"nop", _empty},
+		{"push", _push}, {"pall", _pall},
+		{"pint", _pint}, {"pop", _pop},
+		{"swap", _swap}, {"add", _add},
+		{"sub", _sub}, {"nop", _empty},
+		{"div", _div},
 		{"empty", _empty},
 		{NULL, NULL}
 	};
