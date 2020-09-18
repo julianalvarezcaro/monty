@@ -59,6 +59,7 @@ void _add(stack_t **stack, unsigned int line);
 void _sub(stack_t **stack, unsigned int line);
 void _div(stack_t **stack, unsigned int line);
 void _mul(stack_t **stack, unsigned int line);
+void _mod(stack_t **stack, unsigned int line);
 void _empty(stack_t **stack, unsigned int line);
 
 #endif /* MONTY_H  */
