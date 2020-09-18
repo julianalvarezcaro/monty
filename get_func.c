@@ -23,6 +23,10 @@ void (*get_func(char *opcode))(stack_t **, unsigned int)
 
 	while (inst[i].opcode)
 	{
+		if (opcode[0] == '#')
+		{
+			return (_empty);
+		}
 		if (strcmp(opcode, inst[i].opcode) == 0)
 		{
 			return (inst[i].f);
