@@ -18,7 +18,7 @@ void (*get_func(char *opcode))(stack_t **, unsigned int)
 	};
 	int i = 0;
 
-	while (inst[i]->opcode)
+	while (inst[i].opcode)
 	{
 		if (strcmp(opcode, inst[i].opcode) == 0)
 		{
