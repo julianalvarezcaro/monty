@@ -74,5 +74,8 @@ void m_error_handler(int error_code, int line, char *opcode, char *pathname)
 		case 11:
 			fprintf(stderr, "L%d: division by zero\n", line);
 			exit(EXIT_FAILURE);
+		case 12:
+			fprintf(stderr, "L%d: can't mul, stack too short\n", line);
+			exit(EXIT_FAILURE);
 	}
 }
