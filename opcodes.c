@@ -85,6 +85,32 @@ void _pint(stack_t **stack, unsigned int line)
 }
 
 /**
+ * _pop - removes the top element of a stack
+ *
+ * @stack: stack to remove from
+ * @line: current line number
+ *
+ * Return: void
+ */
+void _pop(stack_t **stack, unsigned int line)
+{
+	stack_t *curr;
+
+	if (*stack == NULL)
+		error_handler(6, line, NULL, NULL);
+	curr = *stack;
+	while (curr->next)
+	{
+		curr = curr->next;
+	}
+	if (curr->prev == NULL)
+		*stack = NULL;
+	else
+		curr->prev->next = NULL;
+	free(curr);
+}
+
+/**
  * _empty - does nothing
  *
  * @stack: pointer to the head of the stack

@@ -36,5 +36,8 @@ void error_handler(int error_code, int line, char *opcode, char *pathname)
 		case 5:
 			fprintf(stderr, "L%d: can't pint, stack empty\n", line);
 			exit(EXIT_FAILURE);
+		case 6:
+			fprintf(stderr, "L%d: can't pop an empty stack\n", line);
+			exit(EXIT_FAILURE);
 	}
 }
