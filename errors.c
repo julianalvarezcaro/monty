@@ -44,3 +44,26 @@ void error_handler(int error_code, int line, char *opcode, char *pathname)
 			exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * m_error_handler - prints error message and exit with exit code
+ *
+ * @error_code: indicates what error procedure to follow
+ * @line: line number where the error ocurred
+ * @opcode: function tryied to be executed
+ * @pathname: file that is trying to be open
+ *
+ * Return: void
+ */
+void m_error_handler(int error_code, int line, char *opcode, char *pathname)
+{
+	(void) opcode;
+	(void) pathname;
+
+	switch (error_code)
+	{
+		case 8:
+			fprintf(stderr, "L%d: can't add, stack too short\n", line);
+			exit(EXIT_FAILURE);
+	}
+}
