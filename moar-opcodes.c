@@ -51,6 +51,8 @@ void _add(stack_t **stack, unsigned int line)
 		elems++;
 		curr = curr->next;
 	}
+	if (elems < 2)
+		m_error_handler(8, line, NULL, NULL);
 	curr->prev->n = curr->prev->n + curr->n;
 	_pop(stack, line);
 }
