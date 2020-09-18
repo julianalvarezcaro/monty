@@ -80,5 +80,11 @@ void m_error_handler(int error_code, int line, char *opcode, char *pathname)
 		case 13:
 			fprintf(stderr, "L%d: can't mod, stack too short\n", line);
 			exit(EXIT_FAILURE);
+		case 14:
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
+			exit(EXIT_FAILURE);
+		case 15:
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", line);
+			exit(EXIT_FAILURE);
 	}
 }
