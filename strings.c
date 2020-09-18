@@ -112,7 +112,7 @@ void validArg(char *arg, int line)
 			error_handler(4, line, NULL, NULL);
 	}
 	element = atoi(arg);
-	if (element == 0 && strcmp(arg, "0") != 0)
+	if (element == 0 && (strcmp(arg, "0") != 0 && strcmp(arg, "-0") != 0))
 		error_handler(4, line, NULL, NULL);
 	argument = element;
 }
