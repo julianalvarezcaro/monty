@@ -16,11 +16,6 @@ int main(int argc, char *argv[])
 	stack = NULL;
 	if (argc != 2)
 		error_handler(0, 0, NULL, NULL);
-	/*
-	 *stack = malloc(sizeof(stack_t));
-	 *if (stack == NULL)
-	 *  error_handler(3, 0, NULL);
-	 */
 	fd = openfile(argv[1], &stack);
 
 	freeStack(stack);

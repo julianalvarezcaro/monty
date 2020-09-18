@@ -51,6 +51,7 @@ void freeStack(stack_t *stack);
 
 void _push(stack_t **stack, unsigned int line);
 void _pall(stack_t **stack, unsigned int line);
+void _pint(stack_t **stack, unsigned int line);
 void _empty(stack_t **stack, unsigned int line);
 
 #endif /* MONTY_H  */

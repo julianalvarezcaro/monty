@@ -63,6 +63,28 @@ void _pall(stack_t **stack, unsigned int line)
 }
 
 /**
+* _pint - prints the top element of a stack
+*
+* @stack: stack to print element from
+* @line: current line number
+*
+* Return: void
+*/
+void _pint(stack_t **stack, unsigned int line)
+{
+    stack_t *curr;
+
+    if (*stack == NULL)
+        error_handler(5, line, NULL, NULL);
+    curr = *stack;
+    while (curr->next)
+    {
+        curr = curr->next;
+    }
+    printf("%d\n", curr->n);
+}
+
+/**
  * _empty - does nothing
  *
  * @stack: pointer to the head of the stack
