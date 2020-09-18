@@ -1,4 +1,6 @@
-push          98 kawa
+push 002a3
+push -2
+push -3
 
-
-  pall qwdqwdq qwefwe 
+         
+pall

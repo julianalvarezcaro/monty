@@ -82,7 +82,7 @@ char *_deleteChar(char *entry, int indx)
 void _split(char *text, char **opcode, char **arg)
 {
 	text = _null_char(text);
-	if (strcmp(text, "") == 0 || strcmp(text, "") == 0)
+	if (strcmp(text, "") == 0 || strcmp(text, " ") == 0)
 	{
 		*opcode = "empty";
 		*arg = "empty";
