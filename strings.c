@@ -102,13 +102,17 @@ void _split(char *text, char **opcode, char **arg)
  */
 void validArg(char *arg, int line)
 {
-	int element;
+	int element, pos;
 
 	if (arg == NULL)
 		error_handler(4, line, NULL, NULL);
+	for (pos = 0; arg[pos] != '\0'; pos++)
+	{
+		if (!((arg[pos] > 47 && arg[pos] < 58) || arg[0] == '-'))
+			error_handler(4, line, NULL, NULL);
+	}
 	element = atoi(arg);
 	if (element == 0 && strcmp(arg, "0") != 0)
 		error_handler(4, line, NULL, NULL);
-
 	argument = element;
 }
